@@ -1,0 +1,196 @@
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body,html {
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+	font-family: 'Lato',sans-serif;
+}
+.pineapple {
+	background-image: url(https://s3.amazonaws.com/luckyplop/89a51c672a282b3af5603588d148f3b1c8ca013e.jpg);
+	background-size: contain;
+	background-attachment: fixed;
+	background-position: center;
+}
+.white {
+	background: white;
+}
+.black {
+	background: black;
+	color: white;
+}
+.gucci-intro {
+	height: 100%;
+	background: black;
+	cursor: pointer;
+	position: relative;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.gucci-content {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.logo {
+  width: 50vw;
+}
+
+
+
+.down-arrow {
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	text-align: center;
+	-webkit-animation: bouncy 4.0s ease infinite;
+	-moz-animation: bouncy 4.0s ease infinite;
+	animation: bouncy 4.0s ease infinite;
+}
+@-webkit-keyframes bouncy { 50% { -webkit-transform: translateY(30px); } }
+@-moz-keyframes bouncy { 50% { -moz-transform: translateY(30px); } }
+@keyframes bouncy { 50% { transform: translateY(30px); } }
+
+.center {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+h1 {
+	font-weight: 300;
+}
+h2 {
+	font-weight: 300;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5em;
+}
+h1.big {
+	font-size: 6vw;
+	padding: 0.5em;
+	margin: 0;
+}
+.gucci {
+	border-radius: 200px;
+	margin: 10px;
+}
+.yellow {
+	color: yellow;
+}
+.flowers {
+	background-image:url(https://s3.amazonaws.com/luckyplop/543994083443ef8546b8de9ff4b259f072dbb779.jpg);
+	background-size: cover;
+	background-position: center bottom;
+	min-height: 1800px;
+}
+.chain {
+	height: 200px;
+	padding: 10px;
+	position: relative;
+}
+.chain figure {
+	margin: 10px;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.chain span {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background: white;
+	padding: 5px;
+}
+.chain:nth-child(4n+1) figure {
+	background-image: url(https://s3.amazonaws.com/luckyplop/25846c8a6d8387f7cdb01e2146294b295dcd2bef.JPG);
+}
+.chain:nth-child(4n+2) figure {
+	background-image: url(https://s3.amazonaws.com/luckyplop/a71e518dabea4de71348ef6804777642fcfc78ae.jpg);
+}
+.chain:nth-child(4n+3) figure {
+	background-image: url(https://s3.amazonaws.com/luckyplop/720031567a34bd30a5ee11a6e0093160a040065d.JPG);
+}
+.chain:nth-child(4n+4) figure {
+	background-image: url(https://s3.amazonaws.com/luckyplop/2d785eaef553d02563270c364c20d71dc86baf51.jpg);
+}
+
+.chain:nth-child(4n+1) figure.chain2 {
+	background-image: url(https://s3.amazonaws.com/luckyplop/7994928ee7f2819223ff5c7607cd4b4ce1450c81.JPG);
+}
+.chain:nth-child(4n+2) figure.chain2 {
+	background-image: url(https://s3.amazonaws.com/luckyplop/abd913521a5ba6ba1ee5e5583444147a49262ebd.jpg);
+}
+.chain:nth-child(4n+3) figure.chain2 {
+	background-image: url(https://s3.amazonaws.com/luckyplop/977060b73407e5e10564905c2cd33b1ce1d0c8f0.jpg);
+}
+.chain:nth-child(4n+4) figure.chain2 {
+	background-image: url(https://s3.amazonaws.com/luckyplop/292bce01491a84a80749d4ae071d55f2bc9f58e2.jpg);
+}
+
+.clouds {
+	background-image: url(https://s3.amazonaws.com/luckyplop/5b39815f66ce28b806bb990871105d88a6cbf7f5.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+.gallery-rapper {
+	width: 100%;
+	padding: 10vw;
+}
+.gallery {
+	width: 90%;
+	background: white;
+}
+.gallery div {
+	background-position: top center !important;
+}
+.zigzag img {
+	width: 100%;
+}
+.footer {
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 100;
+	padding: 100px 0 50px 0;
+}
+.globe {
+	width: 63px;
+	height: 63px;
+	border-radius: 100px;
+	box-shadow: 0 0 10px #fff;
+	margin-bottom: 14px;
+	background: white;
+}
+a {
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+.black a {
+	color: white;
+}
