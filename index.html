@@ -45,23 +45,25 @@
 
         <h1>Team</h1>
       
-        <div class="half">
-        Milica Zec (Director, Co-Creator) is a NYC-based virtual reality and film director. Raised in war-torn
+        <div class="half left">
+        <div class="img" style="background-image:url(img/milica-zec.jpg)"></div>
+        <b>Milica Zec</b> (Director, Co-Creator) is a NYC-based virtual reality and film director. Raised in war-torn
         Serbia, Milica’s work is deeply rooted in issues of conflict, identity, and the human struggle.
         In addition to her own creative and client work, Milica has parlayed her artistic experience into
         a 9-year collaboration with performance artist Marina Abramovic. Highlights of her directorial work
         include the short film, “Christina” (Cannes Film Festival 2012) and “Marina Abramovic Presents MACCOC”
         (Venice Biennale 2011). Milica’s work has appeared in The New York Times, MSNBC, Art Forum, The
-        Huffington Post and many other media outlets. milicazec.com
+        Huffington Post and many other media outlets. <a href="http://milicazec.com" target="_blank">milicazec.com</a>
         </div>
       
-        <div class="half">
-        Winslow Turner Porter III (Producer, Co-Creator) is a Brooklyn based director, creative technologist
+        <div class="half right">
+        <div class="img" style="background-image:url(img/winslow-porter.jpg)"></div>
+        <b>Winslow Turner Porter III</b> (Producer, Co-Creator) is a Brooklyn based director, creative technologist
         and producer who has always been fascinated with the possibilities of how the intersection of art and
         technology can elevate storytelling. With over five years of experiential and digital agency experience,
         he has created experiences for TED, Google, Delta, Diesel and Merrell as well as worked with the who’s
         who of creative coders, having produced Tribeca Film Festival Transmedia award-winning virtual reality
-        documentary CLOUDS among other internationally acclaimed projects. carbonpictures.com 
+        documentary CLOUDS among other internationally acclaimed projects. <a href="http://carbonpictures.com" target="_blank">carbonpictures.com</a>
         </div>      
       </div>
     </div>
@@ -144,6 +146,8 @@
 
   </div>
 
+  <div class="grad"></div>
+  
   <div class="footer">
     <div class="social">
       <a href="https://www.facebook.com/GiantVR/" class="fb"></a>
@@ -171,15 +175,17 @@
   var is_mobile = is_iphone || is_android;
   
   $("html").addClass(is_mobile ? 'mobile' : 'desktop')
+  var lastTimeout
   $(".links a").click(function(){
     var section = $(this).data("role")
     var $el = $("#" + section)
     if (document.body.className == section) {
       document.body.className = ""
       window.location.hash = ""
-      setTimeout(function(){ $el.removeClass("active") }, 2000)
+      lastTimeout = setTimeout(function(){ $el.removeClass("active") }, 2000)
     }
     else {
+      clearTimeout(lastTimeout)
       $(".active").removeClass("active")
       $el.addClass("active")
       setTimeout(function(){ document.body.className = section })
