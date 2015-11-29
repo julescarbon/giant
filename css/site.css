@@ -5,12 +5,209 @@
 body,html {
 	width: 100%; height: 100%;
 	margin: 0; padding: 0;
-	font-family: 'Lato',sans-serif;
+	font-family: 'Roboto',sans-serif;
+	background: black;
+	color: #fff;
+	overflow: hidden;
 }
-.logo {
-  width: 50vw;
+
+.hero {
   position: absolute;
   top: 50%;
   left: 50%;
-  
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
+  text-align: center;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.hero .logo {
+  width: 50vw;
+  max-width: 500px;
+  min-width: 400px;
+  display: block;
+}
+.hero .tagline {
+  font-size: 1.4em;
+  margin-top: 1em;
+  display: block;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+}
+.footer > div {
+  display: table-cell;
+  width: 33%;
+  padding: 10px;
+}
+.footer .social {
+  text-align: left;
+  vertical-align: bottom;
+}
+.footer .logos {
+  text-align: center;
+  vertical-align: bottom;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.footer .links {
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.logos a {
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.9);
+}
+.desktop .logos a:hover {
+  background-color: rgba(128,128,128,0.9);
+}
+
+.links a {
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.9);
+}
+.desktop .links a:hover {
+  background-color: rgba(128,128,128,0.9);
+}
+
+.social a {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.2);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.desktop .social a:hover {
+  background-color: rgba(128,128,128,0.9);
+}
+.social a.fb {
+  background-image: url(../img/social-facebook.svg);
+}
+.social a.tw {
+  background-image: url(../img/social-twitter.svg);
+  background-size: 70%;
+}
+.social a.insta {
+  background-image: url(../img/social-instagram-outline.svg);
+}
+
+.logos img {
+  width: 200px;
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#content {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+#about,#screenings,#credits {
+  opacity: 0;
+  display: none;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  text-align: center;
+  background: rgba(0,0,0,0.9);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform: scale(1.2, 1.2);
+  -webkit-transition: all 0.2s;
+
+  transform-origin: 50% 50%;
+  transform: scale(1.2, 1.2);
+  transition: all 0.2s;
+}
+#content > .active {
+  display: block;
+}
+.about #about,
+.screenings #screenings,
+.credits #credits {
+  transform: scale(1,1);
+  opacity: 1;
+}
+.about .hero,.screenings .hero,.credits .hero,
+.about .logos,.screenings .logos,.credits .logos {
+  opacity: 0;
+}
+
+
+/* ABOUT */
+
+.synopsis {
+  width: 600px;
+  margin: 20px auto 40px auto;
+  line-height: 1.7em;
+  font-size: 20px;
+}
+
+/* CREDITS */
+
+#credits span {
+  font-family: 'Helvetica Neue',sans-serif;
+  font-weight: bold;
+  display: block;
+  margin: 30px 20px 20px 20px;
+  opacity: 0.6;
+}
+#credits img {
+  display: block;
+  margin: 20px auto;
+}
+.names {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.names td {
+  padding: 5px 10px;
+  width: 50%;
+}
+.names tr td:nth-child(1) {
+  vertical-align: top;
+  text-align: right;
+}
+.names tr td:nth-child(2) {
+  vertical-align: top;
+  text-align: left;
+  text-transform: uppercase;
+}
+small {
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: 'Garamond', 'Adobe Garamond Pro', serif;
+  font-size: normal;
+  padding-right: 3px;
+}
+.top-spacer {
+  height: 10vh;
+}
+.spacer {
+  height: 50vh;
 }
