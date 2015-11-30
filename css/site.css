@@ -316,7 +316,7 @@ and (max-device-width: 700px) {
     height: 62vw;
   }
   .half.right .text {
-    margin-bottom: 30vw;
+    margin-bottom: 200px;
   }
 }
 
