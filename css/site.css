@@ -24,7 +24,7 @@ body,html {
 .hero .logo {
   width: 50vw;
   max-width: 500px;
-  min-width: 400px;
+  min-width: 80vw;
   display: block;
 }
 .hero .tagline {
@@ -177,6 +177,12 @@ body,html {
 
 /* ABOUT */
 
+.body {
+  width: 100%;
+  max-width: 1000px;
+  margin: 100px auto 300px auto;
+}
+
 .synopsis {
   width: 600px;
   margin: 20px auto 40px auto;
@@ -191,6 +197,10 @@ body,html {
   text-align: justify;
   margin: 0 1%;
 }
+.half .text {
+  max-width: 500px;
+  margin: 0 auto;
+}
 .half.left {
   margin-left: 4%;
 }
@@ -201,9 +211,12 @@ a { color: white; font-weight: bold }
 .half .img {
   width: 42vw;
   height: 42vw;
+  max-width: 350px;
+  max-height: 350px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  margin: 0 auto;
   margin-bottom: 1em;
   -webkit-filter: grayscale(50%);
   -webkit-transition: -webkit-filter 0.2s;
@@ -212,6 +225,18 @@ a { color: white; font-weight: bold }
 .desktop .half .img:hover {
   -webkit-filter: grayscale(0%);
 }
+
+/* SCREENINGS */
+
+#screenings .body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
+  margin: 0;
+}
+
 /* CREDITS */
 
 #credits span {
@@ -257,3 +282,41 @@ small {
 .spacer {
   height: 50vh;
 }
+
+
+
+@media only screen 
+and (max-device-width: 700px) {
+  .social a {
+    width: 28px;
+    height: 28px;
+  }
+  .footer > div.social {
+    width: 30%;
+  }
+  .footer > div.links {
+    width: 70%;
+    padding-bottom: 12px;
+  }
+  .links a {
+    padding: 5px;
+  }
+  .synopsis {
+    width: 100%;
+  }
+  .half {
+    width: 94%;
+    float: left;
+  }
+  .half.left, .half.right {
+    margin: 2%;
+  }
+  .half .img {
+    width: 62vw;
+    height: 62vw;
+  }
+  .half.right .text {
+    margin-bottom: 30vw;
+  }
+}
+
