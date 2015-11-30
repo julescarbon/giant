@@ -129,6 +129,7 @@ body,html {
   opacity: 0;
   display: none;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   position: absolute;
   top: 0; left: 0;
   width: 100vw;
