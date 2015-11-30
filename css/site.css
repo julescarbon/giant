@@ -81,9 +81,14 @@ body,html {
   background-color: rgba(0,0,0,0.9);
   text-decoration: none;
   font-weight: normal;
+  border-bottom: 2px solid transparent;
 }
 .desktop .links a:hover {
   background-color: rgba(128,128,128,0.9);
+}
+.links a.line {
+  border-bottom: 2px solid white;
+  background: #333;
 }
 
 .social a {
@@ -287,6 +292,9 @@ small {
 
 @media only screen 
 and (max-device-width: 700px) {
+  body {
+    font-size: 13px;
+  }
   .social a {
     width: 28px;
     height: 28px;

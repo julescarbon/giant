@@ -173,6 +173,7 @@
       <a href="http://www.sundance.org/programs/new-frontier"><img src="img/sd.png"></a>
     </div>
 -->
+
     <div class="links">
       <a data-role="about">About</a>
       <a data-role="screenings">Screenings</a>
@@ -193,12 +194,14 @@
   $(".links a").click(function(){
     var section = $(this).data("role")
     var $el = $("#" + section)
+    $(".line").removeClass('line')
     if (document.body.className == section) {
       document.body.className = ""
       window.location.hash = ""
       lastTimeout = setTimeout(function(){ $el.removeClass("active") }, 2000)
     }
     else {
+      $(this).addClass('line')
       clearTimeout(lastTimeout)
       $(".active").removeClass("active")
       $el.addClass("active")
@@ -208,7 +211,6 @@
   })
   $(".names").each(function(){
     var $el = $(this)
-    console.log( this.innerHTML )
     var t = $el.html()
                .split("\n")
                .filter(function(row){ return row.indexOf("(") !== -1 })
