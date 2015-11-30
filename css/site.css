@@ -24,7 +24,6 @@ body,html {
 .hero .logo {
   width: 50vw;
   max-width: 500px;
-  min-width: 80vw;
   display: block;
 }
 .hero .tagline {
