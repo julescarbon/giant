@@ -31,6 +31,17 @@
   <div class="hero">
     <img src="img/giant-logo.svg" class="logo">
     <span class="tagline">A virtual reality experience inspired by real events.</span>
+
+    <form id="form">
+      <div id="fields">
+        Sign up for our newsletter<br>
+        <input type="email" id="email_submit" placeholder="Enter your email">
+      </div>
+      <div id="thanks">
+        Thanks!
+      </div>
+    </form>
+
   </div>
   
   <div id="content">
@@ -260,7 +271,25 @@
                .join("")
     $el.html(t)
   })
-  
+  $("#form").click(function(){
+    $("#form input").focus()
+  })
+  var emailRegex = new RegExp("[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z\.+_]+\.[a-zA-Z]{2,4}")
+  $("#form").submit(function(e){
+    e.preventDefault()
+    var email = $("#email_submit").val()
+    if (! email.match(emailRegex)) {
+      alert("Not a real email address..")
+      return
+    }
+    var data = {}
+    data['entry.1211284169'] = email
+    data['submit'] = "Submit"
+    $.get("https://docs.google.com/forms/d/1aocsk9SASvkjqfVb8C-JdUPdp_JprB1D3pxXY5AySbY/formResponse", data)
+    $("#fields").hide()
+    $("#thanks").show()	
+  })
+
   if (window.location.hash) {
     $("[data-role=" + window.location.hash.substr(1) + "]").trigger("click")
   }
