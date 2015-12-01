@@ -81,7 +81,7 @@ body,html {
   background-color: rgba(0,0,0,0.9);
   text-decoration: none;
   font-weight: normal;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2=px solid transparent;
 }
 .desktop .links a:hover {
   background-color: rgba(128,128,128,0.9);
@@ -130,7 +130,7 @@ body,html {
   width: 100%;
   height: 100%;
 }
-#about,#screenings,#credits {
+#about,#team,#screenings,#credits {
   opacity: 0;
   display: none;
   overflow-y: scroll;
@@ -153,14 +153,41 @@ body,html {
 #content > .active {
   display: block;
 }
+.close {
+  display: none;
+  position: fixed;
+  top: 10px; right: 10px;
+  color: white;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.9);
+  text-decoration: none;
+}
+.close img {
+  width: 25px;
+  height: 25px;
+}
+.desktop .close:hover {
+  background-color: rgba(128,128,128,0.9);
+}
+.about .close,
+.team .close,
+.screenings .close,
+.credits .close {
+  display: block;
+}
+
 .about #about,
+.team #team,
 .screenings #screenings,
 .credits #credits {
   transform: scale(1,1);
   opacity: 1;
 }
-.about .hero,.screenings .hero,.credits .hero,
-.about .logos,.screenings .logos,.credits .logos {
+.about .hero,.team .hero,.screenings .hero,.credits .hero,
+.about .logos,.team .logos,.screenings .logos,.credits .logos {
   opacity: 0;
 }
 
@@ -174,7 +201,7 @@ body,html {
   pointer-events: none;
   transition: opacity 0.2s;
 }
-.about .grad,.screenings .grad,.credits .grad {
+.about .grad,.team .grad,.screenings .grad,.credits .grad {
   opacity: 1;
 }
 

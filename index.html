@@ -42,6 +42,11 @@
         <div class="synopsis">
           Trapped in an active war-zone, two parents struggle to distract their young daughter by inventing a fantastical tale. Inspired by real events, this immersive virtual-reality experience transports the viewer into the family's makeshift basement shelter. The parents' fairytale intensifies as bomb-blasts draw closer and closer...
         </div>
+      </div>
+    </div>
+
+    <div id="team">
+      <div class="body">
 
         <h1>Team</h1>
       
@@ -49,7 +54,7 @@
           <div class="img" style="background-image:url(img/milica-zec.jpg)"></div>
           <div class="text">
             <b>Milica Zec</b> (Director, Co-Creator) is a NYC-based virtual reality and film director. Raised in war-torn
-            Serbia, Milica’s work is deeply rooted in issues of conflict, identity, and the human struggle.
+            Serbia, Milica’s work is deeply rooted in issues of conflict, identity and the human struggle.
             In addition to her own creative and client work, Milica has parlayed her artistic experience into
             a 9-year collaboration with performance artist Marina Abramovic. Highlights of her directorial work
             include the short film, “Christina” (Cannes Film Festival 2012) and “Marina Abramovic Presents MACCOC”
@@ -69,6 +74,34 @@
             documentary CLOUDS among other internationally acclaimed projects. <a href="http://carbonpictures.com" target="_blank">carbonpictures.com</a>
           </div>      
         </div>
+        
+        <br clear="both">
+        <div class="half left">
+          <div class="text">
+            <b>Jack Caron</b> (Lead Technical Artist) is a Brooklyn based creative problem solver focused on game engine driven virtual reality.  Having worked on several experiential projects such as the Interstellar VR experience and Samsung's Avengers VR experience, he comes with a foundation built on experience and ingenuity.
+          </div>
+        </div>
+        
+        <div class="half right">
+          <div class="text">
+            <b>E.A. Donahue</b> (Scriptwriter) has been weaving tales since before she could talk.  She's been involved in the narrative process as an actor, playwright and filmmaker.  For the past 20 years she's worked professionally as an editor for TV and film.  
+          </div>
+        </div>
+
+        <br clear="both">
+
+        <div class="half left">
+          <div class="text">
+            <b>Todd Bryant</b> (VR Creative Technologist) is a video artist and interactive installation engineer living in Brooklyn, NY. He is a faculty researcher at the Interactive Telecommunications Program at Tisch School for the Arts and teaches performance art via motion capture technology at the Tandon School of Engineering at NYU.
+          </div>
+        </div>
+        
+        <div class="half right">
+          <div class="text">
+            <b>Juan Salvo</b> (VFX Supervisor/Compositor) is a colorist, post-super and technical director whose work has been seen on movie and television screens, in web browsers and on mobile devices worldwide. He regularly collaborates with a diverse clientele - acclaimed music video directors, world-renowned artists, advertising creatives, filmmakers and documentarians - to enhance and finish their projects.
+          </div>
+        </div>
+
       </div>
 
       <br><br><br>
@@ -117,12 +150,13 @@
       Jack Caron (Technical Artist)
       Todd Bryant (Creative Technologist)
       Juan Salvo (VFX Supervisor / Compositor)
+      Aleksandar Protic (Sound Designer)
       Alex Corn (Director of Photography)
       Jacob Quesenberry (Camera Assistant)
       James Orlando (Additional Camera)
       Ian Voglesong (Assistant Director)
       Louis Zwiebel (Production Assistant)
-      Milica Zec<br>Winslow Turner Porter III<br><small>and</small> Elizabeth Donahue (Editors) 
+      Milica Zec<br>Winslow Turner Porter III<br><small>and</small> Lizzie Donahue (Editors) 
       Jessica Kelly (Casting Director)
       Mary Egan-Callahan (Casting Director)
       Elliot Coakley (After Effects Artist)
@@ -164,9 +198,9 @@
   
   <div class="footer">
     <div class="social">
-      <a href="https://www.facebook.com/GiantVR/" class="fb"></a>
-      <a href="https://www.instagram.com/giant_vr/" class="insta"></a>
-      <a href="https://twitter.com/Giant_VR" class="tw"></a>
+      <a href="https://www.facebook.com/GiantVR/" class="fb" target="_blank"></a>
+      <a href="https://www.instagram.com/giant_vr/" class="insta" target="_blank"></a>
+      <a href="https://twitter.com/Giant_VR" class="tw" target="_blank"></a>
     </div>
 <!--
     <div class="logos">
@@ -176,10 +210,13 @@
 
     <div class="links">
       <a data-role="about">About</a>
+      <a data-role="team">Team</a>
       <a data-role="screenings">Screenings</a>
       <a data-role="credits">Credits</a>
     </div>
   </div>
+  
+  <div class="close"><img src="img/close.png"></div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
@@ -208,6 +245,11 @@
       setTimeout(function(){ document.body.className = section })
       window.location.hash = "#" + section
     }
+  })
+  $(".close").click(function(){
+    document.body.className = ""
+    window.location.hash = ""
+    lastTimeout = setTimeout(function(){ $el.removeClass("active") }, 2000)
   })
   $(".names").each(function(){
     var $el = $(this)
