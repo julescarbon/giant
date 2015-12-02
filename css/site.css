@@ -10,6 +10,17 @@ body,html {
 	color: #fff;
 	overflow: hidden;
 }
+.desktop body {
+  background-image: url(../img/smoke14.gif);
+  background-size: cover;
+}
+
+/*
+.desktop #about { background-image: url(../img/smoke4.gif); background-size: cover; }
+.desktop #team { background-image: url(../img/smoke14.gif); background-size: cover; }
+.desktop #screenings { background-image: url(../img/smoke12.gif); background-size: cover; }
+*/
+.desktop #credits { background-image: url(../img/smoke13.gif); background-size: cover; }
 
 .hero {
   position: absolute;
@@ -81,7 +92,7 @@ body,html {
   background-color: rgba(0,0,0,0.9);
   text-decoration: none;
   font-weight: normal;
-  border-bottom: 2=px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 .desktop .links a:hover {
   background-color: rgba(128,128,128,0.9);
@@ -144,12 +155,12 @@ body,html {
   text-align: center;
   background: rgba(0,0,0,0.9);
   -webkit-transform-origin: 50% 50%;
-  -webkit-transform: scale(1.2, 1.2);
-  -webkit-transition: all 0.2s;
+  -webkit-transform: scale(1.1, 1.1);
+  -webkit-transition: all 0.1s;
 
   transform-origin: 50% 50%;
-  transform: scale(1.2, 1.2);
-  transition: all 0.2s;
+  transform: scale(1.1, 1.1);
+  transition: all 0.1s;
 }
 #content > .active {
   display: block;
@@ -290,6 +301,7 @@ a { color: white; font-weight: bold }
 
 /* SCREENINGS */
 
+#about .body,
 #screenings .body {
   position: absolute;
   top: 50%;

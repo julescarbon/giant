@@ -126,6 +126,7 @@
     <div id="screenings">
       <div class="body">
         <h1>Screenings</h1>
+        <small>(coming soon)</small>
 <!--
         <img src="img/sundance.png" style="width: 300px;"><br><br>
         
@@ -151,6 +152,7 @@
       Jess Engel (Associate Producer)
       A.E. Donahue (Scriptwriter)
       Aleksandar Protic (Sound Designer)
+      Juan Salvo (Technical Producer)
       </div>
 
       <span>CAST</span>
@@ -174,6 +176,7 @@
       Milica Zec<br>Winslow Turner Porter III<br><small>and</small> Lizzie Donahue (Editors) 
       Jessica Kelly (Casting Director)
       Mary Egan-Callahan (Casting Director)
+      Rodrigo Bellott (Casting Director)
       Elliot Coakley (After Effects Artist)
       Uros Perisic (End Credits)
       James George (RGBD Technician)
@@ -192,7 +195,6 @@
       <a href="http://digitalartsny.com/"><img src="img/digitalarts.png" style="width: 220px;"></a>
       <div class="names">
       Axel Ericson (Creative Director)
-      Omer Shapira (Depth Developer)
       </div>
 
       <span>GIANT DEMO</span>
@@ -264,7 +266,7 @@
   $(".close").click(function(){
     document.body.className = ""
     window.location.hash = ""
-    lastTimeout = setTimeout(function(){ $el.removeClass("active") }, 2000)
+    $(".active").removeClass("active")
   })
   $(".names").each(function(){
     var $el = $(this)
