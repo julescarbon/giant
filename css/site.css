@@ -303,6 +303,86 @@ a { color: white; font-weight: bold }
   -webkit-filter: grayscale(0%);
 }
 
+
+.half {
+  width: 44%;
+  padding: 10px;
+  line-height: 1.7em;
+  float: left;
+  text-align: justify;
+  margin: 0 1%;
+}
+.half .text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.half.left {
+  margin-left: 4%;
+}
+.half.right {
+  margin-right: 4%;
+}
+a { color: white; font-weight: bold }
+.half .img {
+  width: 42vw;
+  height: 42vw;
+  max-width: 350px;
+  max-height: 350px;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  -webkit-filter: grayscale(50%);
+  -webkit-transition: -webkit-filter 0.2s;
+  transition: -webkit-filter 0.2s;
+}
+.desktop .half .img:hover {
+  -webkit-filter: grayscale(0%);
+}
+
+
+.third {
+  width: 29%;
+  padding: 10px;
+  line-height: 1.7em;
+  float: left;
+  text-align: justify;
+  margin: 0 1%;
+}
+.third .text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.third.left {
+  margin-left: 4%;
+}
+.third.middle {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.third.right {
+  margin-right: 2%;
+}
+a { color: white; font-weight: bold }
+.third .img {
+  width: 22vw;
+  height: 22vw;
+  max-width: 350px;
+  max-height: 350px;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  -webkit-filter: grayscale(50%);
+  -webkit-transition: -webkit-filter 0.2s;
+  transition: -webkit-filter 0.2s;
+}
+.desktop .third .img:hover {
+  -webkit-filter: grayscale(0%);
+}
+
 /* SCREENINGS */
 
 #about .body,
@@ -394,19 +474,19 @@ and (max-device-width: 700px) {
   .synopsis {
     width: 100%;
   }
-  .half {
+  .half,.third {
     width: 94%;
     float: left;
   }
-  .half.left, .half.right {
+  .half.left, .half.right,.third {
     margin: 2%;
   }
-  .half .img {
+  .half .img, .third .img {
     width: 62vw;
     height: 62vw;
   }
   .half.right .text {
-    margin-bottom: 200px;
+    margin-bottom: 20px;
   }
   .logos img {
     width: 80px
