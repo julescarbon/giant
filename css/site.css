@@ -58,6 +58,7 @@ body,html {
 .footer .social {
   text-align: left;
   vertical-align: bottom;
+  display: table-cell;
 }
 .footer .logos {
   text-align: center;
@@ -125,6 +126,9 @@ body,html {
 }
 .social a.insta {
   background-image: url(../img/social-instagram-outline.svg);
+}
+.social a.email {
+  background-image: url(../img/social-email.svg);
 }
 
 .logos img {
@@ -403,6 +407,19 @@ and (max-device-width: 700px) {
   }
   .half.right .text {
     margin-bottom: 200px;
+  }
+  .logos img {
+    width: 80px
+  }
+  .hero .logo {
+    width: 270px;
+  }
+  .footer > div.footer-rapper {
+    display: table-row;
+  }
+  .footer .logos {
+    position: fixed;
+    bottom: 50px;
   }
 }
 
