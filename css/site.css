@@ -463,6 +463,8 @@ and (max-device-width: 700px) {
   }
   .footer > div.social {
     width: 30%;
+    position: relative;
+    top: 32px;
   }
   .footer > div.links {
     width: 70%;
