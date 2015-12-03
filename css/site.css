@@ -334,6 +334,9 @@ a { color: white; font-weight: bold }
   padding: 5px 10px;
   width: 50%;
 }
+.names .thanx tr td:nth-child(1) {
+  text-align: center;
+}
 .names tr td:nth-child(1) {
   vertical-align: top;
   text-align: right;
@@ -342,6 +345,12 @@ a { color: white; font-weight: bold }
   vertical-align: top;
   text-align: left;
   text-transform: uppercase;
+}
+.thanx {
+  margin-top: 0;
+  padding-top: 0px;
+  white-space: pre-line;
+  line-height: 1.7;
 }
 small {
   text-transform: lowercase;
