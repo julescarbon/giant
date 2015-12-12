@@ -462,12 +462,10 @@ and (max-device-width: 700px) {
     height: 28px;
   }
   .footer > div.social {
-    width: 30%;
-    position: relative;
-    top: 32px;
+    width: 35%;
   }
   .footer > div.links {
-    width: 70%;
+    width: 65%;
     padding-bottom: 12px;
   }
   .links a {
@@ -475,6 +473,7 @@ and (max-device-width: 700px) {
   }
   .synopsis {
     width: 100%;
+    font-size: 18px;
   }
   .half,.third {
     width: 94%;
@@ -500,8 +499,25 @@ and (max-device-width: 700px) {
     display: table-row;
   }
   .footer .logos {
-    position: fixed;
+    position: absolute;
     bottom: 50px;
   }
+  .footer > div {
+    padding: 0 6px 10px 6px;
+  }
+  .footer > div.links {
+    padding-left: 0px;
+  }
+  .footer > div.social {
+    padding-right: 0px;
+  }
+  .body {
+    margin: 50px auto 100px auto;
+  }
+  #about .body,
+  #screenings .body {
+    top: 42%;
+  }
+
 }
 
