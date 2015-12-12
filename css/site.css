@@ -368,8 +368,8 @@ a { color: white; font-weight: bold }
 .third .img {
   width: 22vw;
   height: 22vw;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 270px;
+  max-height: 270px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
