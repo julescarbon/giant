@@ -253,6 +253,10 @@ b####GDS#G44',.G****`@.PANDA#%%%%D%$$$````'`'``''''``````''`````'.```````````''r
           </div>
         </div>
 
+        <br clear="both">
+        <br clear="both">
+        <br clear="both">
+        <br clear="both">
 
       </div>
 
@@ -423,7 +427,12 @@ b####GDS#G44',.G****`@.PANDA#%%%%D%$$$````'`'``''''``````''`````'.```````````''r
   var is_android = (navigator.userAgent.match(/Android/i))
   var is_firefox = (navigator.userAgent.match(/Firefox/i))
   var is_mobile = is_iphone || is_android;
-  
+ 
+  var preload = new Image
+  preload.src = "img/milica-zec.jpg"
+  var preload2 = new Image
+  preload2.src = "img/sundance.jpg"
+ 
   $("html").addClass(is_mobile ? 'mobile' : 'desktop')
   var lastTimeout
   $(".links a").click(function(){
