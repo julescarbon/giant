@@ -146,7 +146,7 @@ body,html {
   height: 100%;
   pointer-events: none;
 }
-#about,#team,#screenings,#credits {
+#about,#team,#screenings,#credits,#press {
   opacity: 0;
   display: none;
   overflow-y: scroll;
@@ -213,6 +213,7 @@ body,html {
 .about #form,
 .team #form,
 .screenings #form,
+.press #form,
 .credits #form {
   opacity: 0;
 }
@@ -220,6 +221,7 @@ body,html {
 .about #content,
 .team #content,
 .screenings #content,
+.press #content,
 .credits #content {
   pointer-events: auto;
 }
@@ -227,12 +229,13 @@ body,html {
 .about #about,
 .team #team,
 .screenings #screenings,
+.press #press,
 .credits #credits {
   transform: scale(1,1);
   opacity: 1;
 }
-.about .hero,.team .hero,.screenings .hero,.credits .hero,
-.about .logos,.team .logos,.screenings .logos,.credits .logos {
+.about .hero,.team .hero,.screenings .hero,.credits .hero,.press .hero,
+.about .logos,.team .logos,.screenings .logos,.credits .logos,.press .logos {
   opacity: 0;
 }
 
@@ -246,7 +249,7 @@ body,html {
   pointer-events: none;
   transition: opacity 0.2s;
 }
-.about .grad,.team .grad,.screenings .grad,.credits .grad {
+.about .grad,.team .grad,.screenings .grad,.credits .grad,.press .grad {
   opacity: 1;
 }
 
@@ -382,6 +385,27 @@ a { color: white; font-weight: bold }
 .desktop .third .img:hover {
   -webkit-filter: grayscale(0%);
 }
+
+/* PRESS */
+
+#press .third a {
+  text-decoration: none;
+  font-weight: normal;
+  display: block;
+}
+#press .third .quote {
+}
+#press .third .link {
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 1em;
+  font-family: 'Georgia', serif;
+}
+#press .third .link u {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
 
 /* SCREENINGS */
 

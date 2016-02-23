@@ -288,6 +288,23 @@ b####GDS#G44',.G****`@.PANDA#%%%%D%$$$````'`'``''''``````''`````'.```````````''r
       <div class="spacer"></div>
     </div>
 
+    <div id="press">
+      <div class="body">
+        <h1>Press</h1>
+        <div class="content"></div>
+        <script type="text/html" class="template">
+          <div class="third {{align}}">
+            <a class="quote" href="{{link}}">
+              {{text}}
+            </a>
+            <a class="link" href="{{link}}">
+              &mdash; <u>{{source}}</u>
+            </a>
+          </div>
+        </script>
+      </div>
+    </div>
+    
     <div id="screenings">
       <div class="body">
         <h1>Screenings</h1>
@@ -458,12 +475,89 @@ b####GDS#G44',.G****`@.PANDA#%%%%D%$$$````'`'``''''``````''`````'.```````````''r
     <div class="links">
       <a data-role="about">About</a>
       <a data-role="team">Team</a>
+      <a data-role="press">Press</a>
       <a data-role="screenings">Screenings</a>
       <a data-role="credits">Credits</a>
     </div>
   </div>
   
   <div class="close"><img src="img/close.png"></div>
+
+<script text="text/javascript">
+var PRESS = [
+  {
+    link: "http://www.latimes.com/entertainment/movies/moviesnow/la-et-mn-sundance-vr-films-new-frontier-oculus-gear-20160130-story.html",
+    text: "Sundance 2016: Nine new VR pieces you need to know: Giant demonstrates how VR can convey the horror of war in a way American Sniper never could",
+    source: "The New York Times",
+  },
+  {
+    link: "http://www.theverge.com/2016/1/29/10871384/sundance-film-festival-2016-best-vr",
+    text: "The best virtual reality from the 2016 Sundance Film Festival: It’s deeply personal story is briefly told but powerful.",
+    source: "The Verge",
+  },
+  {
+    link: "http://www.newsweek.com/day-two-sundance-film-festival-419004",
+    text: "Zec and Porter tell me that the nine-month process for creating Giant, which ambitiously sought to merge an interactive video game environment with real 360 video, was ‘like walking through fire.’",
+    source: "Newsweek",
+  },
+  {
+    link: "http://blogs.indiewire.com/womenandhollywood/sundance-2016-women-directors-meet-milica-zec-giant-20160121",
+    text: "Having worked as a filmmaker with performance artist Marina Abramovic has taught me a great deal about fearlessness",
+    source: "Indiewire",
+  },
+  {
+    link: "http://www.usatoday.com/story/life/entertainthis/2016/01/23/sundance-diary-tried-7-vr-experiences/79219416/",
+    text: "I got bombed in the basement",
+    source: "USA Today",
+  },
+  {
+    link: "http://www.theguardian.com/film/filmblog/2016/feb/01/sundance-film-festival-2016-six-things-we-learned-park-city",
+    text: "Filmmakers such as Milica Zec also took viewers inside an experience – in her case a bombing raid in an urban area",
+    source: "The Guardian",
+  },
+  {
+    link: "http://techcrunch.com/2016/01/20/matt-damon-in-vr-now-were-talking/",
+    text: "I’m sweating just thinking about it",
+    source: "Techcrunch",
+  },
+  {
+    link: "http://monocle.com/radio/shows/culture-with-rob-bound/225/sundance-film-festival-2016-virtual-reality/",
+    text: "Giant is spotlit in Chapter 3 of Monocle's radio report on the Sundance Film Festival.",
+    source: "Monocle",
+    quotes: "false",
+  },
+  {
+    link: "http://www.theguardian.com/film/2016/jan/28/virtual-reality-immersive-film-making-wowing-sundance",
+    text: "The interactive elements left audiences stunned.",
+    source: "The Guardian",
+  },
+  {
+    link: "http://blogs.nvidia.com/blog/2016/01/22/giant-vr-experience-sundance-new-frontier/",
+    text: "The five-minute VR film ‘Giant’ is sure to be a highlight at this year’s Sundance Film Festival New Frontier Program.",
+    source: "NVidia Blog",
+  },
+  {
+    link: "http://therealitysandwich.com/sundance-vr-film-selection/",
+    text: "The likes of ‘Giant’ is a powerful piece directed by Milica Zec’s which brings to life an experience in a bomb shelter.",
+    source: "The Reality Sandwich",
+  },
+  {
+    link: "http://www.parkrecord.com/scene/ci_29451101/ready-jump-off-virtual-cliff",
+    text: "Milica’s hope is that virtual reality installations like hers can be used to influence international policy makers by giving them a more visceral sense of the effects of their decisions.",
+    source: "Park Record",
+  },
+  {
+    link: "http://www.thewrap.com/sundance-kendrick-lamar-bjork-logan-paul-the-martian-projects-highlight-new-frontier-program/",
+    text: "‘For me, New Frontier has always embraced risk and innovation in a way that reflects the heart of Sundance and the ever-evolving nature of film’ - Robert Redford",
+    source: "The Wrap",
+  },
+  {
+    link: "http://www.digitalcinemareport.com/article/creating-giant-experience#.Vrp40ZMrJE5",
+    text: "One of the highlights at this year’s Sundance Film Festival’s New Frontier Program could be the five-minute virtual reality film experience Giant.",
+    source: "Digital Cinema Report",
+  },
+]
+</script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/sparkle.js"></script>
@@ -477,7 +571,7 @@ b####GDS#G44',.G****`@.PANDA#%%%%D%$$$````'`'``''''``````''`````'.```````````''r
   var preload = new Image
   preload.src = "img/milica-zec.jpg"
   var preload2 = new Image
-  preload2.src = "img/sundance.jpg"
+  preload2.src = "img/sundance.png"
  
   $("html").addClass(is_mobile ? 'mobile' : 'desktop')
   var lastTimeout
@@ -533,6 +627,24 @@ b####GDS#G44',.G****`@.PANDA#%%%%D%$$$````'`'``''''``````''`````'.```````````''r
     $("#fields").hide()
     $("#thanks").show()	
   })
+  
+  var PRESS_TEMPLATE = $("#press .template").html()
+  PRESS.forEach(function(data, i){
+    var align = ["left","center","right"][i%3]
+    var text = data.text
+    if (data.quotes !== "false") {
+      text = "&ldquo;" + text + "&rdquo;"
+    }
+    var template = PRESS_TEMPLATE.replace(/{{align}}/g, align)
+                                 .replace(/{{text}}/g, text)
+                                 .replace(/{{link}}/g, data.link)
+                                 .replace(/{{source}}/g, data.source)
+    $("#press .content").append(template)
+    if ((i % 3) == 2) {
+      $("#press .content").append("<br clear='both'><br clear='both'>")
+    }
+  })
+  $("#press .content").append("<br clear='both'><br clear='both'>")
 
   if (window.location.hash) {
     $("[data-role=" + window.location.hash.substr(1) + "]").trigger("click")
