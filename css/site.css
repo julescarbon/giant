@@ -418,6 +418,20 @@ a { color: white; font-weight: bold }
   transform: translate3D(-50%, -50%, 0);
   margin: 0;
 }
+#screenings a {
+  text-decoration: none;
+  font-weight: normal;
+  display: block;
+}
+#screenings .half .img {
+  height: 22vw;
+  max-height: 150px;
+  background-size: contain;
+  background-position: center center;
+}
+#screenings .text {
+  text-align: center;
+}
 
 /* CREDITS */
 
