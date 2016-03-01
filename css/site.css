@@ -269,42 +269,6 @@ body,html {
   line-height: 1.7em;
   font-size: 20px;
 }
-.half {
-  width: 44%;
-  padding: 10px;
-  line-height: 1.7em;
-  float: left;
-  text-align: justify;
-  margin: 0 1%;
-}
-.half .text {
-  max-width: 500px;
-  margin: 0 auto;
-}
-.half.left {
-  margin-left: 4%;
-}
-.half.right {
-  margin-right: 4%;
-}
-a { color: white; font-weight: bold }
-.half .img {
-  width: 42vw;
-  height: 42vw;
-  max-width: 350px;
-  max-height: 350px;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  margin-bottom: 1em;
-  -webkit-filter: grayscale(50%);
-  -webkit-transition: -webkit-filter 0.2s;
-  transition: -webkit-filter 0.2s;
-}
-.desktop .half .img:hover {
-  -webkit-filter: grayscale(0%);
-}
 
 
 .half {
@@ -392,6 +356,7 @@ a { color: white; font-weight: bold }
   text-decoration: none;
   font-weight: normal;
   display: block;
+  text-align: left;
 }
 #press .third .quote {
 }
@@ -421,16 +386,24 @@ a { color: white; font-weight: bold }
 #screenings a {
   text-decoration: none;
   font-weight: normal;
-  display: block;
+  display: inline-block;
 }
 #screenings .half .img {
-  height: 22vw;
-  max-height: 150px;
+  height: 15vw;
+  max-height: 100px;
   background-size: contain;
   background-position: center center;
 }
 #screenings .text {
   text-align: center;
+}
+#screenings .third {
+  text-align: center;
+}
+#screenings .third a,
+#screenings u {
+  border-bottom: 1px dotted;
+  text-decoration: none;
 }
 
 /* CREDITS */
