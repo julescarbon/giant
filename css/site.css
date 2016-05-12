@@ -77,7 +77,6 @@ body,html {
   padding: 10px;
   display: inline-block;
   cursor: pointer;
-  background-color: rgba(0,0,0,0.9);
   text-decoration: none;
 }
 .desktop .logos a:hover {
