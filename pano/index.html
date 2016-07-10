@@ -24,7 +24,7 @@
 
 			var isUserInteracting = false,
 			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
-			lon = 0, onMouseDownLon = 0,
+			lon = 180, onMouseDownLon = 0,
 			lat = 0, onMouseDownLat = 0,
 			phi = 0, theta = 0;
 
@@ -46,7 +46,7 @@
 				geometry.scale( - 1, 1, 1 );
 
 				var material = new THREE.MeshBasicMaterial( {
-					map: new THREE.TextureLoader().load( 'basement.jpg' )
+					map: new THREE.TextureLoader().load( 'basement2.jpg' )
 				} );
 
 				mesh = new THREE.Mesh( geometry, material );
