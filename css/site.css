@@ -11,8 +11,10 @@ body,html {
 	overflow: hidden;
 }
 .desktop body {
+/* 
   background-image: url(../img/smoke14.gif);
   background-size: cover;
+ */
 }
 
 .desktop iframe.bg {
@@ -21,7 +23,9 @@ body,html {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.35;
+  border: 0;
+  pointer-events: none;
 }
 .mobile iframe.bg {
   display: none;
