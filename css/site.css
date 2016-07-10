@@ -480,7 +480,11 @@ small {
   height: 50vh;
 }
 
-
+@media only screen and (max-device-height: 700px) {
+  .logos img {
+    height: 47px;
+  }
+}
 
 @media only screen 
 and (max-device-width: 700px) {
@@ -520,7 +524,7 @@ and (max-device-width: 700px) {
     margin-bottom: 20px;
   }
   .logos img {
-    width: 80px
+    height: 47px
   }
   .hero .logo {
     width: 270px;
