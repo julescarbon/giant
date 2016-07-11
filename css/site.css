@@ -277,7 +277,7 @@ body,html {
   pointer-events: none;
   transition: opacity 0.2s;
 }
-.about .grad,.team .grad,.screenings .grad,.credits .grad,.press .grad {
+.about .grad,.team .grad,.desktop .screenings .grad,.credits .grad,.press .grad {
   opacity: 1;
 }
 
