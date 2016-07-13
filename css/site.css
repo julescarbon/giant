@@ -389,7 +389,7 @@ a { color: white; font-weight: bold }
 #press .third .quote {
 }
 #press .third .link {
-  text-align: right;
+  text-align: center;
   font-style: italic;
   margin-bottom: 1em;
   font-family: 'Georgia', serif;
@@ -397,6 +397,18 @@ a { color: white; font-weight: bold }
 #press .third .link u {
   border-bottom: 1px dotted;
   text-decoration: none;
+}
+#press .third .link.image {
+  text-align: center;
+}
+#press .image {
+  margin-top: 10px;
+  height: 50px;
+  width: 100%;
+  background-size: contain;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 

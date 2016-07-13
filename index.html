@@ -297,13 +297,21 @@ b####GDS#G44',.G****`@.PANDA#%%%%D%$$$````'`'``''''``````''`````'.```````````''r
       <div class="body">
         <h1>Press</h1>
         <div class="content"></div>
-        <script type="text/html" class="template">
+        <script type="text/html" class="press-template">
           <div class="third {{align}}">
+            <a class="link {{klass}}" href="{{link}}" target="_blank">
+              {{source}}
+            </a>
             <a class="quote" href="{{link}}" target="_blank">
               {{text}}
             </a>
-            <a class="link" href="{{link}}" target="_blank">
-              &mdash; <u>{{source}}</u>
+          </div>
+        </script>
+        <script type="text/html" class="image-template">
+          <div class="third {{align}}">
+            <a class="link image" href="{{link}}" style="background-image:url({{image}})" target="_blank"></a>
+            <a class="quote" href="{{link}}" target="_blank">
+              {{text}}
             </a>
           </div>
         </script>
@@ -622,53 +630,64 @@ var PRESS = [
     link: "http://www.latimes.com/entertainment/movies/moviesnow/la-et-mn-sundance-vr-films-new-frontier-oculus-gear-20160130-story.html",
     text: "Sundance 2016: Nine new VR pieces you need to know: Giant demonstrates how VR can convey the horror of war in a way American Sniper never could",
     source: "The Los Angeles Times",
+    image: "img/latimes.png",
   },
   {
     link: "http://www.newyorker.com/magazine/2016/04/25/making-movies-with-virtual-reality",
     text: "As the blasts move nearer, you hear them in your headphones, see them in the flickering light bulbs above you, and feel them in the stool vibrating below you. The sense of claustrophobia becomes acute &ndash; you can look behind you or above you, but you’ll find only close walls and low ceilings.",
     source: "The New Yorker",
+    image: "img/newyorker.png",
   },
   {
     link: "http://www.theverge.com/2016/1/29/10871384/sundance-film-festival-2016-best-vr",
     text: "The best virtual reality from the 2016 Sundance Film Festival: It’s deeply personal story is briefly told but powerful.",
     source: "The Verge",
+    image: "img/verge.png",
   },
   {
     link: "http://www.newsweek.com/day-two-sundance-film-festival-419004",
     text: "Zec and Porter tell me that the nine-month process for creating Giant, which ambitiously sought to merge an interactive video game environment with real 360 video, was ‘like walking through fire.’",
     source: "Newsweek",
+    image: "img/newsweek.png",
   },
   {
     link: "http://www.usatoday.com/story/life/entertainthis/2016/01/23/sundance-diary-tried-7-vr-experiences/79219416/",
     text: "I got bombed in the basement",
     source: "USA Today",
+    image: "img/usatoday.png",
   },
   {
     link: "http://blogs.indiewire.com/womenandhollywood/sundance-2016-women-directors-meet-milica-zec-giant-20160121",
     text: "Having worked as a filmmaker with performance artist Marina Abramovic has taught me a great deal about fearlessness",
     source: "Indiewire",
+    image: "img/indiewire.png",
   },
   {
     link: "http://www.theguardian.com/film/filmblog/2016/feb/01/sundance-film-festival-2016-six-things-we-learned-park-city",
     text: "Filmmakers such as Milica Zec also took viewers inside an experience – in her case a bombing raid in an urban area",
     source: "The Guardian",
+    image: "img/guardian.png",
   },
   {
     link: "http://techcrunch.com/2016/01/20/matt-damon-in-vr-now-were-talking/",
     text: "I’m sweating just thinking about it",
     source: "Techcrunch",
+    image: "img/techcrunch.png",
   },
   {
     link: "http://monocle.com/radio/shows/culture-with-rob-bound/225/sundance-film-festival-2016-virtual-reality/",
     text: "Giant is spotlit in Chapter 3 of Monocle's radio report on the Sundance Film Festival.",
     source: "Monocle",
     quotes: "false",
+    image: "img/monocle.png",
   },
+/*
   {
     link: "http://www.theguardian.com/film/2016/jan/28/virtual-reality-immersive-film-making-wowing-sundance",
     text: "The interactive elements left audiences stunned.",
     source: "The Guardian",
   },
+*/
   {
     link: "http://blogs.nvidia.com/blog/2016/01/22/giant-vr-experience-sundance-new-frontier/",
     text: "The five-minute VR film ‘Giant’ is sure to be a highlight at this year’s Sundance Film Festival New Frontier Program.",
@@ -696,7 +715,7 @@ var PRESS = [
   },
   {
     link: "http://thecreatorsproject.vice.com/blog/giant-vr-film-gdc",
-    text: "Incorporating live action, depth camera footage, 3D modeling software, and haptic feedback, the film is a heart-wrenching and immersive experience that cuts right to the soul. Few projects so well live up to virtual reality’s potential to be the ultimate “empathy machine.”",
+    text: "Incorporating live action, depth camera footage, 3D modeling software, and haptic feedback, the film is a heart-wrenching and immersive experience that cuts right to the soul. Few projects so well live up to virtual reality’s potential to be the ultimate 'empathy machine.'",
     source: "The Creators Project",
   },
   {
@@ -828,17 +847,20 @@ var PRESS = [
     $("#thanks").show()	
   })
   
-  var PRESS_TEMPLATE = $("#press .template").html()
+  var PRESS_TEMPLATE = $("#press .press-template").html()
+  var IMAGE_TEMPLATE = $("#press .image-template").html()
   PRESS.forEach(function(data, i){
     var align = ["left","center","right"][i%3]
     var text = data.text
     if (data.quotes !== "false") {
       text = "&ldquo;" + text + "&rdquo;"
     }
-    var template = PRESS_TEMPLATE.replace(/{{align}}/g, align)
-                                 .replace(/{{text}}/g, text)
-                                 .replace(/{{link}}/g, data.link)
-                                 .replace(/{{source}}/g, data.source)
+    var template = data.image ? IMAGE_TEMPLATE : PRESS_TEMPLATE
+    template = template.replace(/{{align}}/g, align)
+                       .replace(/{{text}}/g, text)
+                       .replace(/{{link}}/g, data.link)
+                       .replace(/{{image}}/g, data.image)
+                       .replace(/{{source}}/g, '<u>' + data.source + '</u>')
     $("#press .content").append(template)
     if ((i % 3) == 2) {
       $("#press .content").append("<br clear='both'><br clear='both'>")
