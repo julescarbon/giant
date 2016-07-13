@@ -651,10 +651,10 @@ var PRESS = [
     image: "img/newsweek.png",
   },
   {
-    link: "http://www.usatoday.com/story/life/entertainthis/2016/01/23/sundance-diary-tried-7-vr-experiences/79219416/",
-    text: "I got bombed in the basement",
-    source: "USA Today",
-    image: "img/usatoday.png",
+    link: "http://www.theguardian.com/film/filmblog/2016/feb/01/sundance-film-festival-2016-six-things-we-learned-park-city",
+    text: "Filmmakers such as Milica Zec also took viewers inside an experience – in her case a bombing raid in an urban area",
+    source: "The Guardian",
+    image: "img/guardian.png",
   },
   {
     link: "http://blogs.indiewire.com/womenandhollywood/sundance-2016-women-directors-meet-milica-zec-giant-20160121",
@@ -663,10 +663,10 @@ var PRESS = [
     image: "img/indiewire.png",
   },
   {
-    link: "http://www.theguardian.com/film/filmblog/2016/feb/01/sundance-film-festival-2016-six-things-we-learned-park-city",
-    text: "Filmmakers such as Milica Zec also took viewers inside an experience – in her case a bombing raid in an urban area",
-    source: "The Guardian",
-    image: "img/guardian.png",
+    link: "http://www.usatoday.com/story/life/entertainthis/2016/01/23/sundance-diary-tried-7-vr-experiences/79219416/",
+    text: "I got bombed in the basement",
+    source: "USA Today",
+    image: "img/usatoday.png",
   },
   {
     link: "http://techcrunch.com/2016/01/20/matt-damon-in-vr-now-were-talking/",
@@ -807,6 +807,7 @@ var PRESS = [
       clearTimeout(lastTimeout)
       $(".active").removeClass("active")
       $el.addClass("active")
+      document.body.className = "transit"
       setTimeout(function(){ document.body.className = section })
       window.location.hash = "#" + section
     }

@@ -222,6 +222,15 @@ body,html {
 .credits .close {
   display: block;
 }
+.about .bg,
+.team .bg,
+.press .bg,
+.screenings .bg,
+.credits .bg,
+.transit .bg {
+  display: none;
+}
+
 
 #form, #form input {
   margin-top: 50px;
