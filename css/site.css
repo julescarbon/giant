@@ -400,10 +400,7 @@ a { color: white; font-weight: bold }
 }
 
 
-/* SCREENINGS */
-
-#about .body,
-#screenings .body {
+#about .body {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -411,14 +408,17 @@ a { color: white; font-weight: bold }
   transform: translate3D(-50%, -50%, 0);
   margin: 0;
 }
+
+/* SCREENINGS */
+
 #screenings a {
   text-decoration: none;
   font-weight: normal;
   display: inline-block;
 }
-#screenings .half .img {
+#screenings .img {
   height: 15vw;
-  max-height: 100px;
+  max-height: 60px;
   background-size: contain;
   background-position: center center;
 }
