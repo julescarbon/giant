@@ -778,6 +778,21 @@ var PRESS = [
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 <script src="js/sparkle.js"></script>
 <script>
+
+  var ga
+  if (window.location.origin.match("giantofficial")) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81350759-1', 'auto');
+    ga('send', 'pageview');
+  }
+  else {
+    ga = function(){}
+  }
+  
   var is_iphone = (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i));
   var is_ipad = (navigator.userAgent.match(/iPad/i));
   var is_android = (navigator.userAgent.match(/Android/i))
@@ -798,11 +813,13 @@ var PRESS = [
     var $el = $("#" + section)
     $(".line").removeClass('line')
     if (document.body.className == section) {
+      ga('send', 'event', 'navigate', 'home')
       document.body.className = ""
       window.location.hash = ""
       lastTimeout = setTimeout(function(){ $el.removeClass("active") }, 2000)
     }
     else {
+      ga('send', 'event', 'navigate', section)
       $(this).addClass('line')
       clearTimeout(lastTimeout)
       $(".active").removeClass("active")
@@ -813,6 +830,7 @@ var PRESS = [
     }
   })
   $(".close").click(function(){
+    ga('send', 'event', 'navigate', 'home')
     document.body.className = ""
     window.location.hash = ""
     $(".active").removeClass("active")
@@ -827,8 +845,8 @@ var PRESS = [
                .join("")
     t = t.replace(/>\s+Julian/, ' class="lol">Julian')
     $el.html(t)
-    $(".lol").one("mouseover", function(){ $(init) })
   })
+  $(".lol").one("mouseover", function(){ $(init) })
   $("#form").click(function(){
     $("#form input").focus()
   })
@@ -840,6 +858,7 @@ var PRESS = [
       alert("Not a real email address..")
       return
     }
+    ga('send', 'event', 'mailinglist', 'signup')
     var data = {}
     data['entry.1211284169'] = email
     data['submit'] = "Submit"

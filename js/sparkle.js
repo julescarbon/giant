@@ -23,6 +23,7 @@ var tinyy=new Array();
 var tinyv=new Array();
 
 function init() {
+  ga('send', 'event', 'sparkle', 'init')
   var i, rats, rlef, rdow;
   for (var i=0; i<sparkles; i++) {
     var rats=createDiv(3, 3);
