@@ -34,7 +34,7 @@ body,html {
 /*
 .desktop #about { background-image: url(../img/smoke4.gif); background-size: cover; }
 .desktop #team { background-image: url(../img/smoke14.gif); background-size: cover; }
-.desktop #screenings { background-image: url(../img/smoke12.gif); background-size: cover; }
+.desktop .screenings-table { background-image: url(../img/smoke12.gif); background-size: cover; }
 */
 .desktop #credits { background-image: url(../img/smoke13.gif); background-size: cover; }
 
@@ -173,7 +173,7 @@ body,html {
 #about.active {
   overflow: hidden;
 }
-#about,#team,#screenings,#credits,#press {
+#about,#team,.screenings-table,#credits,#press {
   opacity: 0;
   display: none;
   overflow-y: scroll;
@@ -218,14 +218,16 @@ body,html {
 .about .close,
 .team .close,
 .press .close,
-.screenings .close,
+.festivals .close,
+.lectures .close,
 .credits .close {
   display: block;
 }
 .about .bg,
 .team .bg,
 .press .bg,
-.screenings .bg,
+.festivals .bg,
+.lectures .bg,
 .credits .bg,
 .transit .bg {
   display: none;
@@ -249,7 +251,8 @@ body,html {
 
 .about #form,
 .team #form,
-.screenings #form,
+.festivals #form,
+.lectures #form,
 .press #form,
 .credits #form {
   opacity: 0;
@@ -257,7 +260,8 @@ body,html {
 
 .about #content,
 .team #content,
-.screenings #content,
+.festivals #content,
+.lectures #content,
 .press #content,
 .credits #content {
   pointer-events: auto;
@@ -265,14 +269,15 @@ body,html {
 
 .about #about,
 .team #team,
-.screenings #screenings,
+.lectures #lectures,
+.festivals #festivals,
 .press #press,
 .credits #credits {
   transform: scale(1,1);
   opacity: 1;
 }
-.about .hero,.team .hero,.screenings .hero,.credits .hero,.press .hero,
-.about .logos,.team .logos,.screenings .logos,.credits .logos,.press .logos {
+.about .hero,.team .hero,.festivals .hero,.lectures .hero,.credits .hero,.press .hero,
+.about .logos,.team .logos,.festivals .logos,.lectures .logos,.credits .logos,.press .logos {
   opacity: 0;
 }
 
@@ -286,7 +291,12 @@ body,html {
   pointer-events: none;
   transition: opacity 0.2s;
 }
-.about .grad,.team .grad,.desktop .screenings .grad,.credits .grad,.press .grad {
+.about .grad,
+.team .grad,
+.desktop .festivals .grad,
+.desktop .lectures .grad,
+.credits .grad,
+.press .grad {
   opacity: 1;
 }
 
@@ -430,27 +440,27 @@ a { color: white; font-weight: bold }
   margin: 0;
 }
 
-/* SCREENINGS */
+/* FESTIVALS / LECTURES */
 
-#screenings a {
+.screenings-table a {
   text-decoration: none;
   font-weight: normal;
   display: inline-block;
 }
-#screenings .img {
+.screenings-table .img {
   height: 15vw;
   max-height: 60px;
   background-size: contain;
   background-position: center center;
 }
-#screenings .text {
+.screenings-table .text {
   text-align: center;
 }
-#screenings .third {
+.screenings-table .third {
   text-align: center;
 }
-#screenings .third a,
-#screenings u {
+.screenings-table .third a,
+.screenings-table u {
   border-bottom: 1px dotted;
   text-decoration: none;
 }
@@ -579,7 +589,7 @@ and (max-width: 700px) {
     margin: 50px auto 100px auto;
   }
   #about .body,
-  #screenings .body {
+  .screenings-table .body {
     top: 42%;
   }
 
