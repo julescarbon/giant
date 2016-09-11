@@ -101,7 +101,7 @@ body,html {
 .logos img {
   min-height: 47px;
   max-height: 67px;
-  height: 7vw;
+  height: 3.5vw;
   display: inline-block;
   background-size: contain;
   background-position: center center;
@@ -117,7 +117,7 @@ body,html {
 .links a {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
-  padding: 10px;
+  padding: 9px;
   display: inline-block;
   cursor: pointer;
   background-color: rgba(0,0,0,0.9);
