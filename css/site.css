@@ -442,6 +442,13 @@ a { color: white; font-weight: bold }
 
 /* FESTIVALS / LECTURES */
 
+.screenings-table,
+.screenings-table .text {
+  color: #bbb;
+}
+.screenings-table h1 {
+  color: #fff;
+}
 .screenings-table a {
   text-decoration: none;
   font-weight: normal;
@@ -464,6 +471,14 @@ a { color: white; font-weight: bold }
   border-bottom: 1px dotted;
   text-decoration: none;
 }
+.inquiries {
+  margin: 0 0 20px 0;
+}
+.inquiries a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 
 /* CREDITS */
 
