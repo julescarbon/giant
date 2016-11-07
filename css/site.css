@@ -454,9 +454,13 @@ a { color: white; font-weight: bold }
   font-weight: normal;
   display: inline-block;
 }
+#festivals .third {
+  margin-bottom: 1.75em;
+}
 .screenings-table .img {
   height: 15vw;
-  max-height: 60px;
+  max-height: 70px;
+  margin-bottom: 0.75em;
   background-size: contain;
   background-position: center center;
 }
