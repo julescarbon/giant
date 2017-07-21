@@ -108,6 +108,10 @@ body,html {
   background-repeat: no-repeat;
 }
 
+.teaser {
+  float: left;
+  width: 50%;
+}
 /* --- */
 
 .desktop .logos a:hover {
@@ -614,6 +618,9 @@ and (max-width: 700px) {
   #about .body,
   .screenings-table .body {
     top: 42%;
+  }
+  .teaser {
+    display: none;
   }
 
 }
