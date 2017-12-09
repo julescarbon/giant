@@ -99,9 +99,9 @@ body,html {
 }
 
 .logos img {
-  min-height: 47px;
-  max-height: 67px;
-  height: 3.5vw;
+  min-height: 37px;
+  max-height: 57px;
+  height: 2.5vw;
   display: inline-block;
   background-size: contain;
   background-position: center center;
@@ -128,6 +128,7 @@ body,html {
   text-decoration: none;
   font-weight: normal;
   border-bottom: 2px solid transparent;
+  margin-top: 4px;
 }
 .desktop .links a:hover {
   background-color: rgba(128,128,128,0.9);
@@ -174,10 +175,11 @@ body,html {
   height: 100%;
   pointer-events: none;
 }
-#about.active {
+#about.active,
+#contact.active {
   overflow: hidden;
 }
-#about,#team,.screenings-table,#credits,#press {
+#about,#contact,#team,.screenings-table,#credits,#press {
   opacity: 0;
   display: none;
   overflow-y: scroll;
@@ -220,6 +222,7 @@ body,html {
   background-color: rgba(128,128,128,0.9);
 }
 .about .close,
+.contact .close,
 .team .close,
 .press .close,
 .festivals .close,
@@ -228,6 +231,7 @@ body,html {
   display: block;
 }
 .about .bg,
+.contact .bg,
 .team .bg,
 .press .bg,
 .festivals .bg,
@@ -254,6 +258,7 @@ body,html {
 }
 
 .about #form,
+.contact #form,
 .team #form,
 .festivals #form,
 .lectures #form,
@@ -263,6 +268,7 @@ body,html {
 }
 
 .about #content,
+.contact #content,
 .team #content,
 .festivals #content,
 .lectures #content,
@@ -272,6 +278,7 @@ body,html {
 }
 
 .about #about,
+.contact #contact,
 .team #team,
 .lectures #lectures,
 .festivals #festivals,
@@ -280,8 +287,8 @@ body,html {
   transform: scale(1,1);
   opacity: 1;
 }
-.about .hero,.team .hero,.festivals .hero,.lectures .hero,.credits .hero,.press .hero,
-.about .logos,.team .logos,.festivals .logos,.lectures .logos,.credits .logos,.press .logos {
+.about .hero,.contact .hero,.team .hero,.festivals .hero,.lectures .hero,.credits .hero,.press .hero,
+.about .logos,.contact .logos,.team .logos,.festivals .logos,.lectures .logos,.credits .logos,.press .logos {
   opacity: 0;
 }
 
@@ -296,6 +303,7 @@ body,html {
   transition: opacity 0.2s;
 }
 .about .grad,
+.contact .grad,
 .team .grad,
 .desktop .festivals .grad,
 .desktop .lectures .grad,
@@ -435,7 +443,8 @@ a { color: white; font-weight: bold }
 }
 
 
-#about .body {
+#about .body,
+#contact .body, {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -572,6 +581,7 @@ and (max-width: 700px) {
   .footer > div.logos {
     opacity: 0;
     pointer-events: none !important;
+    display: none;
   }
   
   .links a {
@@ -616,6 +626,7 @@ and (max-width: 700px) {
     margin: 50px auto 100px auto;
   }
   #about .body,
+  #contact .body,
   .screenings-table .body {
     top: 42%;
   }
