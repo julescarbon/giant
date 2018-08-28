@@ -99,9 +99,9 @@ body,html {
 }
 
 .logos img {
-  min-height: 37px;
+  min-height: 30px;
   max-height: 57px;
-  height: 2.5vw;
+  height: 2.2vw;
   display: inline-block;
   background-size: contain;
   background-position: center center;
@@ -638,12 +638,12 @@ and (max-width: 700px) {
 
 @media screen and (max-height: 700px) {
     .logos img {
-      min-height: 37px;
-      height: 8vh;
+      min-height: 27px;
+      height: 5.0vh;
       max-height: 67px;
     }
     #form, #form input {
-      margin-bottom: 30px;
+      margin-bottom: 5px;
     }
     .footer > div {
       padding:6px
